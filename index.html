@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang= "en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+     <title>District 8 Council Race Fundraising </title>
+     <style>
+
+    h1 {
+        font-family: "Fira Sans Condensed", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 36px;
+
+    }
+
+    img {
+       width: 100%
+
+    }
+
+    h2 { 
+        font-family: "Fira Sans Condensed", sans-serif  ;
+        font-size: 30px;
+        margin: 20px;
+        text-align: center;
+        color: #00072d;
+    }
+
+    #container > * {
+        display: inline-block;
+        vertical-align: top;
+    }
+    div.photo-container {
+        max-width: 200px;
+        width: 100%;
+        background-color: #bcd4e6;
+        padding: 20px;
+        border-radius: 25px;
+        padding: 20px;
+        width: 200px;
+        height: 650px;
+    }
+
+    p.privatefunds, p.publicfunds, p.spending{
+        font-family: "Fira Sans Condensed", sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        text-align: center;
+        color: #00072d;
+        line-height: 1.25em;
+
+    }
+
+    p.balance {
+        font-family: "Fira Sans Condensed", sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        text-align: center;
+        color: #780000;
+    }
+
+    p.number {
+        font-family: "Crimson Text", sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        text-align: center;
+        color: black;
+    }
+     </style>
+</head>
+<body>
+    <h1> How Much Are the District 8 Candidates are Fundraising? </h1>
+    <div id= "container">
+        <div class="photo-container">
+            <h2>Elsie Encarnacion</h2> 
+            <img src="elsieencarnacion.jpg" alt="Campaign picture of Elsie Encarnacion">
+            <p class="privatefunds"> Private Funds </p>
+                <p class="number"> $35,068</p>
+
+            <p class="publicfunds">Public Funds </p>
+                <p class="number"> $133,517.00 </p>
+
+            <p class="spending"> Spent So Far </p>
+                <p class="number"> $13,519.00</p>
+
+            <p class="balance">Remaining Balance </p>
+                <p class="number"> $155,066.00 </p>
+        </div>
+    <script>
+
+        const candidateData = [
+        {
+            name: 'Clarisa Alayeto',
+            priv: '$32,014',
+            pub: '$60,830',
+            spend: '$12,886',
+            balance: '$79,958'
+            
+        },
+        {
+            name: 'Wilfredo Lopez',
+            priv: '$33,284',
+            pub: '$68,066',
+            spend: '$55,934',
+            balance: '$45,416',
+        },
+        {
+            name: 'Raymond Santana',
+            priv: '$19,425',
+            pub: '$0',
+            spend: '$2,524',
+            balance: '$16,901',
+        },
+        {
+            name: 'Federico Colon',
+            priv: '$12,676',
+            pub: '$0',
+            spend: '$4,001',
+            balance: '$8,675',
+        },
+        ];
+
+        let container = document.getElementById('container');
+
+    candidateData.forEach
+        let perCard = document.createElement("div");
+        perCard.classList.add("card")
+
+        let perName = document.createElement("div");
+        perName.classList.add("name");
+        perName.innerHTML = `<h2>${candidate.name}</h2>`;
+
+        let perPriv = document.createElement("div");
+        perPriv.classList.add("priv");
+        perPriv.innerHTML = `<p class="privatefunds">Private Funds</p><p class="number">${candidate.priv}</p>`;
+
+        let perPub = document.createElement("div");
+        perPub.classList.add("pub");
+        perPub.innerHTML = `<p class="publicfunds">Public Funds</p><p class="number">${candidate.pub}</p>`;
+
+
+        let perSpend = document.createElement("div");
+        perSpend.classList.add("spend");
+        perSpend.innerHTML = `<p class="spending">Spent So Far</p><p class="number">${candidate.spend}</p>`;
+
+
+        let perBalance = document.createElement("div");
+        perBalance.classList.add("balance");
+        perBalance.innerHTML = `<p class="balance">Remaining Balance</p><p class="number">${candidate.balance}</p>`;
+
+
+        perCard.appendChild(perName);
+        perCard.appendChild(perPriv);
+        perCard.appendChild(perPub);
+        perCard.appendChild(perSpend);
+        perCard.appendChild(perBalance);
+
+    container.appendChild(perCard);
+       
+    
+       </script>
+
+
+</body>
+
+
+
+
+
+</html>`
